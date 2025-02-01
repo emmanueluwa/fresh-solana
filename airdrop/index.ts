@@ -20,5 +20,3 @@ export const airdrop = async (address: string, amount: number) => {
     signature,
   });
 };
-
-airdrop("CV6JPu7JutiAqWnBASht3uzSqSpYLv3iHhWuHpLrMXE9", 6);

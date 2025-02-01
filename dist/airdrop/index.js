@@ -25,5 +25,4 @@ const airdrop = (address, amount) => __awaiter(void 0, void 0, void 0, function*
     });
 });
 exports.airdrop = airdrop;
-(0, exports.airdrop)("CV6JPu7JutiAqWnBASht3uzSqSpYLv3iHhWuHpLrMXE9", 6);
 //# sourceMappingURL=index.js.map

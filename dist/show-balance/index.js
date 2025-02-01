@@ -18,9 +18,4 @@ const showBalance = (publicKey) => __awaiter(void 0, void 0, void 0, function* (
     return response.lamports / web3_js_1.LAMPORTS_PER_SOL;
 });
 exports.showBalance = showBalance;
-(() => __awaiter(void 0, void 0, void 0, function* () {
-    const publicKey = "CV6JPu7JutiAqWnBASht3uzSqSpYLv3iHhWuHpLrMXE9";
-    const balance = yield (0, exports.showBalance)(new web3_js_1.PublicKey(publicKey));
-    console.log(`balance for ${publicKey} is ${balance}`);
-}))();
 //# sourceMappingURL=index.js.map

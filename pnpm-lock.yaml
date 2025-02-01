@@ -11,6 +11,9 @@ importers:
       '@solana/web3.js':
         specifier: ^1.98.0
         version: 1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@types/node':
+        specifier: ^22.13.0
+        version: 22.13.0
     devDependencies:
       typescript:
         specifier: ^5.7.3
@@ -275,7 +278,7 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.13.0
 
   '@types/node@12.20.55': {}
 
@@ -287,7 +290,7 @@ snapshots:
 
   '@types/ws@7.4.7':
     dependencies:
-      '@types/node': 12.20.55
+      '@types/node': 22.13.0
 
   '@types/ws@8.5.14':
     dependencies:

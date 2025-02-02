@@ -11,8 +11,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.transferSol = void 0;
 const web3_js_1 = require("@solana/web3.js");
-const airdrop_1 = require("../airdrop");
-const show_balance_1 = require("../show-balance");
 const transferSol = (from, to, amount) => __awaiter(void 0, void 0, void 0, function* () {
     const conn = new web3_js_1.Connection("http://localhost:8899", "confirmed");
     const transaction = new web3_js_1.Transaction();
@@ -35,16 +33,4 @@ const secret = Uint8Array.from([
 ]);
 const fromKeyPair = web3_js_1.Keypair.fromSecretKey(secret);
 const toPublicKey = new web3_js_1.PublicKey("CV6JPu7JutiAqWnBASht3uzSqSpYLv3iHhWuHpLrMXE9");
-(() => __awaiter(void 0, void 0, void 0, function* () {
-    yield (0, airdrop_1.airdrop)(fromKeyPair.publicKey, 10);
-    const initialBalance = yield (0, show_balance_1.showBalance)(fromKeyPair.publicKey);
-    console.log(`initial balance is ${initialBalance}`);
-    const initialBalanceZwei = yield (0, show_balance_1.showBalance)(toPublicKey);
-    console.log(`initial balance of to wallet is ${initialBalanceZwei}`);
-    yield (0, exports.transferSol)(fromKeyPair, toPublicKey, 4);
-    const newBalance = yield (0, show_balance_1.showBalance)(fromKeyPair.publicKey);
-    console.log(`new balance is ${newBalance}`);
-    const newBalanceZwei = yield (0, show_balance_1.showBalance)(toPublicKey);
-    console.log(`new balance of to wallet is ${newBalanceZwei}`);
-}))();
 //# sourceMappingURL=index.js.map

@@ -14,9 +14,9 @@ export const airdrop = async (address: PublicKey, amount: number) => {
     amount * LAMPORTS_PER_SOL
   );
   //wait for transaction of signature to be confirmed before exiting
-  await conn.confirmTransaction({
-    blockhash: latestBlockHash.blockhash,
-    lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-    signature,
-  });
+  // await conn.confirmTransaction({
+  //   blockhash: latestBlockHash.blockhash,
+  //   lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+  //   signature,
+  // });
 };

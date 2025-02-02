@@ -18,11 +18,11 @@ const airdrop = (address, amount) => __awaiter(void 0, void 0, void 0, function*
     const latestBlockHash = yield conn.getLatestBlockhash();
     const signature = yield conn.requestAirdrop(publicKey, amount * web3_js_1.LAMPORTS_PER_SOL);
     //wait for transaction of signature to be confirmed before exiting
-    yield conn.confirmTransaction({
-        blockhash: latestBlockHash.blockhash,
-        lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-        signature,
-    });
+    // await conn.confirmTransaction({
+    //   blockhash: latestBlockHash.blockhash,
+    //   lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+    //   signature,
+    // });
 });
 exports.airdrop = airdrop;
 //# sourceMappingURL=index.js.map
